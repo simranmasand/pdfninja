@@ -18,13 +18,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--apikey_filepath",default='/Users/simranmasand/Downloads/openapi_key.txt',type=str,help="This is where the api_key is stored as .txt file.")
 parser.add_argument("--documents_path",default="../simpossum/",type=str,help="This is where the pdf documents are stored.")
 args = parser.parse_args()
-os.environ["OPENAI_API_KEY"]=load_api_key(filepath=args.apikey_filepath)
+os.environ["OPENAI_API_KEY"]=load_api_key(filepath=args.apikey_filepath) #load the api key into session
 
 
 # print(os.environ["OPENAI_API_KEY"])
 
 embeddings = OpenAIEmbeddings()
-llm = OpenAI(model_name="text-davinci-003")
+llm = OpenAI(model_name="text-davinci-003") #This is the generative model we are using. We can switch this out with an argparser agument
 
 # Provide the directory path where you want to search for PDF files
 
@@ -49,8 +49,8 @@ for pdf_file in pdf_files_list:
 
 print('-----------------------------------')
 
-docsall = process_documents(pdf_files_list)
-vector_store=FAISS.from_documents(docsall,embeddings)
+docsall = process_documents(pdf_files_list) #process documents into a Document schema
+vector_store=FAISS.from_documents(docsall,embeddings) #using openai schema, we process documents into vector database
 retriever = vector_store.as_retriever(search_kwargs={"k": 1}) #get top k docs # this can be an argaparser requirement
 query = input("What file are you looking for? For example: you can ask get me the invoice for flower bulbs. Or get me Simran's resume. Just press enter for a random prompt ")
 if not query:
