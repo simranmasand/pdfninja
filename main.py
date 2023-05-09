@@ -1,10 +1,6 @@
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 import argparse
-import spacy
-from spacy.lang.en import English
-
-
 import pprint
 import random
 from tqdm import tqdm
