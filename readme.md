@@ -1,6 +1,14 @@
 # PDFNinja
 
-PdfNinja is a Python App that leverages the power of Large Language Models to deal with your documents. Have a large pile of PDFs? Us this tool to simplify your workflow. PDFNinja leverages the chain capabilities of Langchain to create a powerful tool for you to simplify search of pdfs and querying them. 
+PdfNinja is a Python App that leverages the power of Large Language Models to deal with your documents. 
+PDFNinja uses the chain capabilities of Langchain to create a powerful tool for you to simplify search of pdfs and querying them. 
+PDFNinja can have use case in legal discovery and evidence documentation.
+
+
+Have a large pile of PDFs? Use this tool to simplify your workflow. 
+
+> **Warning**
+> Due to token limitations, it is highly recommended to push pdfs with less than 5 pages e.g. push textbooks as chapters.
 
 ## Installation
 
@@ -10,11 +18,14 @@ $ pip install -r requirements.txt
 ```
 
 ## Usage
-You can call pdfninja right from terminal or command line interface. 
+You can call pdfninja right from the command line interface. 
 
 ### Pre-processing
-Obtain an API key from OpenAI. This is parsed to the program using the --apikey_filepath argument.
-Have the folder where you want to search for pdf documents as a directory path as well. This will be parsed to the program using --documents_path argument.
+
+1. Obtain an API key from OpenAI.
+2. Store it as a string in a .txt file
+3. This is parsed to the program using the --apikey_filepath argument.
+4. Have the folder where you want to search for pdf documents as a directory path as well. This will be parsed to the program using --documents_path argument.
 
 ### Run from terminal
 
