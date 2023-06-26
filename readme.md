@@ -44,3 +44,6 @@ python main.py --apikey_filepath ./userx/Downloads/apikey.txt
 ### See an interactive of this below
 [![asciicast](https://asciinema.org/a/8RLOcIgrJ61pXeqnD4EZY6Zrx.svg)](https://asciinema.org/a/8RLOcIgrJ61pXeqnD4EZY6Zrx)
 
+### Demo app
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pdfninja-2gfoe5cbcah.streamlit.app/)
