@@ -33,11 +33,6 @@ llm = OpenAI(model_name="text-davinci-003")
 # Provide the directory path where you want to search for PDF files
 
 # directory_path = input("Please provide the absolute path of your directory.")
-directory_path = args.documents_path
-
-
-if not directory_path:
-    directory_path = "../simpossum/"
 
 
 
