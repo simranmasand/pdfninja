@@ -133,6 +133,7 @@ def api_sidebar():
 
         if api_key_input:
             set_openai_api_key(api_key_input)
+            # st.session_state["OPENAI_API_KEY"] = api_key_input
     #
     # api_key = None
     # try:
